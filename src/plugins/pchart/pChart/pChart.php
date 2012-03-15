@@ -206,7 +206,7 @@ class pChart
 	/* Image Map settings */
 	var $BuildMap = FALSE;
 	var $MapFunction = NULL;
-	var $tmpFolder = "tmp/";
+	var $tmpFolder = "system/html/";
 	var $MapID = NULL;
 
 	/* This function create the background picture */
@@ -4002,7 +4002,7 @@ class pChart
 	function getImageMap($MapName, $Flush = TRUE)
 	{
 		/* Strip HTML query strings */
-		$Values   = $this->tmpFolder . $MapName;
+		$Values   = TL_ROOT . '/' . $this->tmpFolder . $MapName;
 		$Value    = split("\?", $Values);
 		$FileName = $Value[0];
 
@@ -4036,7 +4036,7 @@ class pChart
 			return (-1);
 		}
 
-		$Handle = fopen($this->tmpFolder . $this->MapID, 'w');
+		$Handle = fopen(TL_ROOT . '/' . $this->tmpFolder . $this->MapID, 'w');
 		if (!$Handle) {
 			$this->Errors[] = "[Warning] SaveImageMap - Cannot save the image map.";
 			return (-1);
