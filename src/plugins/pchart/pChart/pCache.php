@@ -35,12 +35,12 @@
 class pCache
 {
 	var $HashKey = "";
-	var $CacheFolder = "Cache/";
+	var $CacheFolder = "";
 
 	/* Create the pCache object */
-	function pCache($CacheFolder = "Cache/")
+	function pCache($CacheFolder = "system/html/")
 	{
-		$this->CacheFolder = $CacheFolder;
+		$this->CacheFolder = TL_ROOT  . '/' . $CacheFolder;
 	}
 
 	/* This function is clearing the cache folder */
