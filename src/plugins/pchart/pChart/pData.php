@@ -261,5 +261,3 @@ class pData
 		return ($this->DataDescription);
 	}
 }
-
-?>

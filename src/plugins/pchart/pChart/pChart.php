@@ -4145,5 +4145,3 @@ function RaiseFatal($Message)
 	echo "[FATAL] " . $Message . "\r\n";
 	exit();
 }
-
-?>

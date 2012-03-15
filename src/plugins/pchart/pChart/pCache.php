@@ -114,5 +114,3 @@ class pCache
 		return (md5($mKey));
 	}
 }
-
-?>
